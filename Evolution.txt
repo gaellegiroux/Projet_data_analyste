@@ -1,0 +1,140 @@
+# Évolution – Procédure Power BI ↔ SAP / BIOLINE
+
+**Document concerné :** `procedure-powerbi-sap.html`
+**Date :** 2026-10-29
+
+## Cahier des charges – Évolution du document
+
+### Contexte
+Créer / faire évoluer un document HTML de procédure pour un projet Data Analyst / BI (SAP + Power BI) en lien avec la société BIOLINE.
+
+### Périmètre
+- Couvrir tout le cycle de vie de la donnée : cadrage → cahier des charges → gestion de projet → versionning → architecture → modélisation → ETL → contrôle qualité → analyse → reporting → documentation → présentation.
+- Intégrer les sources SAP / Power BI / BIOLINE.
+- Mettre en place un suivi des mises à jour.
+
+### Exigences fonctionnelles
+- Document en français.
+- Bouton thème clair / thème sombre.
+- Données accessibles sous forme d’onglets (ou sections navigables).
+
+### Critères de validation
+- Structure validée par le demandeur.
+- Liens ajoutés aux fichiers concernés.
+- Bloc « outils / Kanban » supprimé.
+
+---
+
+## Historique des étapes réalisées (cahier des charges – déroulé)
+
+### Étape 0 – Recueil des besoins
+- Identification des 3 sources : documentation SAP (SAP Fiori Client), documentation Power BI (Microsoft Learn), société BIOLINE (site officiel).
+- Identification du fichier `source.txt` comme source de référence.
+
+### Étape 1 – Création de la version initiale du HTML
+- Création de `procedure-powerbi-sap.html`.
+- Sections initiales : Contexte, Prérequis, Étapes, Modélisation, Dépannage, Bonnes pratiques, Sources.
+
+### Étape 2 – Ajout des sections opérationnelles
+- Ajout de la Checklist de validation avant publication.
+- Ajout du Questionnaire SAP.
+- Ajout des Exemples DAX / KPI.
+- Ajout du Modèle de données biologique.
+
+### Étape 3 – Ajout du diagramme de Gantt
+- Ajout du SVG Gantt (étapes : Cadrage, Prérequis, Connexion SAP, Modélisation, Dépannage, Publication).
+- Ajout du lien vers `Planning_stage_data_analyse.xlsx`.
+
+### Étape 4 – Ajout des données réelles
+- Extraction des tâches T01–T25 depuis le planning Excel.
+- Intégration du tableau des tâches dans le Gantt / données.
+
+### Étape 5 – Restauration de la version « rich »
+- Restauration de la version complète (avec les données réelles) au lieu de la version à onglets.
+
+### Étape 6 – Restructuration en version riche
+- Mise en forme finale avec toutes les sections.
+
+### Étape 7 – Ajout des nouvelles parties
+- Présentation de l’entreprise.
+- Cahier des charges.
+- Architecture des données.
+- Analyse exploratoire (EDA).
+- Script / ETL.
+- KPI / Dashboard.
+- Résultats.
+- Perspectives et/ou proposition.
+
+### Étape 8 – Suppression
+- Suppression des outils de gestion de projet (Microsoft Planner, Project, Excel, GanttProject, Trello, GitHub Projects, Azure DevOps).
+- Suppression des États Kanban (Backlog, To Do, In Progress, Testing, Done).
+
+### Étape 9 – Ajout des liens vers les fichiers
+- KPI / Dashboard : `Bi_export_donnees.pdf`.
+- Script / ETL : `Scripts SQL.txt`, `Scripts Python.py`, `mesures_DAX.txt`.
+- Perspectives : `Recommandations.docx`.
+- Résultats : `Resultat.pdf`.
+- Analyse : `Analyse.pdf`.
+
+### Étape 10 – Ajout de la partie Power BI avant l’EDA
+- Insertion d’une section « Power BI – Modélisation et reporting » avant l’Analyse (EDA).
+- Visuel rapide (SVG) : flux SAP → Extraction SQL → Nettoyage / Transformation → Modélisation → Dashboard Power BI.
+- Ajout du lien : `Bi.pbix` (modèle Power BI / suivi).
+- Ajout des liens de navigation manquants (Présentation, Cahier des charges, Architecture, Power BI, Analyse, Script, KPI / Dashboard, Résultats, Perspectives).
+
+### Étape 11 – Ajout des dictionnaires, catalogue KPI, Data Quality Report, Journal des décisions et REX
+- Ajout de la section « Dictionnaire des données » (fichier : dictionnaire_donnees.xlsx – Table / Colonne / Type / Description).
+- Ajout de la section « Dictionnaire des acronymes » (fichier : dictionnaire_acronyme.xlsx).
+- Ajout de la section « Catalogue des KPI » (fichier : Catalogue KPI.xlsx – KPI / Formule / Objectif).
+- Ajout des liens Data Quality Report.xlsx et Journal des décisions.xlsx dans la partie Analyse (EDA).
+- Ajout de la partie « REX – Retour sur expérience » (fichier : REX.docx).
+- Mise à jour du README.txt.
+
+### Étape 12 – Réorganisation et renumérotation
+- Réorganisation des sections : Catalogue des KPI juste après KPI / Dashboard, Dictionnaire des données juste après l’Analyse (EDA), Dictionnaire des acronymes juste après l’Architecture des données, Power BI juste après KPI / Dashboard, Exemples DAX / KPI juste après Power BI.
+- Renumerotation séquentielle de toutes les sections (1 à 26).
+- Éclaircir la couleur du bleu en mode sombre.
+
+### Étape 13 – Réorganisation complète et ajout des séparateurs visuels
+- Dépannage rapide déplacé en fin de document, juste avant Sources.
+- Nouvelle partie « Cartographie métier » juste après Présentation de l’entreprise (schéma du processus métier).
+- Nouvelle partie « Gouvernance des données » juste avant l’Analyse exploratoire (EDA).
+- « Power BI – Modélisation et reporting » déplacée juste avant le KPI / Dashboard.
+- « Catalogue des KPI » placé avant les Exemples de requêtes DAX / métriques KPI.
+- « Modèle de données biologique » placé avant l’Analyse exploratoire (EDA).
+- Nouvelle partie « Schéma de l’étoile » insérée entre le Dictionnaire des données et l’EDA, en lien avec `schema_etoile.loo`.
+- Ajout de séparateurs visuels (phases : Présentation entreprise, Compréhension des données, Qualité des analyses, Visualisation, Recommandations business, Retour d'expérience).
+- Renumerotation séquentielle des sections (1 à 29).
+- Synchronisation du Markdown (`procedure-powerbi-sap.md`).
+
+### Étape 14 – Ajustements de contenu, aperçu des données, lien Cahier des charges et repositionnement des séparateurs
+- Remplacement des phrases « ⚠️ Ce volet est issu d’un fichier à créer (vide pour l’instant) et sera alimenté ultérieurement. » :
+  - Résultats : « Synthèse des analyses menées à partir des indicateurs clés, pour mesurer la performance, identifier les écarts et orienter les décisions. »
+  - KPI / Dashboard : « Tableaux de bord synthétiques pour suivre la performance de l’activité et faciliter la prise de décision. »
+  - Analyse exploratoire (EDA) : « exploration des données pour dégager les tendances, comparer les performances et repérer les saisonnalités, à l’aide de visualisations. »
+  - Script / ETL : « Automatisation de la collecte, du nettoyage et de la transformation des données pour alimenter les analyses de façon fiable et reproductible. »
+  - Perspectives : « Pistes d’amélioration et évolutions envisagées pour renforcer les analyses et soutenir les décisions futures. »
+- Section 12 : ajout de l’aperçu des 5 premières lignes du fichier (`<pre>`).
+- Section 4 : ajout du lien `cahier_des_charges.docx` et du résumé.
+- Section 11 : titre « Planning des tâches » et nouvelle formulation.
+- Section 27 : ajout du bilan du projet.
+- Suppression de « 📎 Schéma : schema_etoile.loo » (Cartographie métier).
+- Suppression de « (présent dans le même dossier). » (liens sources / planning).
+- Déplacement du séparateur 🔍 (juste avant la section 13, version renforcée) et du séparateur ✅ (juste avant la section 19).
+- Synchronisation HTML / Markdown.
+
+---
+
+## Spécification fonctionnelle finale (cahier des charges)
+
+### Fonctionnalités attendues
+1. Affichage des sections par ordre validé.
+2. Liens vers les fichiers concernés.
+3. Suppression des blocs non pertinents.
+4. Suivi des mises à jour via `PROCEDURE_UPDATE_LOG.md`.
+
+### Exigences techniques
+- HTML / CSS / JS.
+- Thème clair / sombre.
+- SVG Gantt.
+- Tableaux HTML.

@@ -1,0 +1,28 @@
+Documentation SAP
+
+https://help.sap.com/doc/d55f83e12e4b40779158fbaf08fe0f14/1.11/fr-FR/index.html
+
+
+documentation Power BI
+
+https://learn.microsoft.com/fr-fr/power-bi/
+
+societe BOLINE
+
+https://www.biolineagrosciences.com/fr/
+
+
+consigne :
+
+faire un html en francais
+avoir un bouton theme clair / theme sombre
+donnees accesible sous forme d'onglet et pas acces a des partie
+
+toujours avoir comme onglet :
+	contextes : presentation de l'entreprise
+	presentation du projet
+	diagramme de gantt
+	sources
+	checklist
+	
+	
