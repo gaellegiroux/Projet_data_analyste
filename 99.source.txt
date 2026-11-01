@@ -7,9 +7,10 @@ documentation Power BI
 
 https://learn.microsoft.com/fr-fr/power-bi/
 
-societe BOLINE
 
-https://www.biolineagrosciences.com/fr/
+entreprise :
+
+societe BOLINE : https://www.biolineagrosciences.com/fr/
 
 
 consigne :

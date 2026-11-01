@@ -181,39 +181,12 @@ Planification visuelle des tâches, de leurs durées et de leurs dépendances po
 
 Données issues du fichier Excel **Planning_stage_data_analyse.xlsx** (onglet « PLANNING DES TÂCHES »), en lien avec le [diagramme de Gantt](#11-modèle-de-gestion-du-projet--diagramme-de-gantt) :
 
-### Tâches du projet (T01–T25)
+### Tâches du projet 
 
-| ID | Phase | Tâche | Responsable | Durée (jours) | Priorité | Statut | Dépend de | Livrable attendu | Notes |
-|---|---|---|---|---|---|---|---|---|---|
-| T01 | Cadrage | Prendre connaissance du contexte, des objectifs et du processus métier | Stagiaire | 2 | Haute | En cours | Note de cadrage | – | – |
-| T02 | Cadrage | Clarifier la problématique et les questions d'analyse | Stagiaire | 4 | Haute | à faire | T01 | Problématique validée | – |
-| T03 | Cadrage | Définir les indicateurs de réussite et le périmètre | Stagiaire | 6 | Haute | à faire | T02 | Liste des indicateurs | – |
-| T04 | Cadrage | Établir le plan de travail avec le tuteur ou la tutrice | Stagiaire | 2 | Moyenne | à faire | T03 | Planning validé | – |
-| T05 | Collecte & compréhension | Inventorier les sources et obtenir les accès nécessaires | Stagiaire | 5 | Haute | à faire | T03 | Inventaire des sources | – |
-| T06 | Collecte & compréhension | Explorer les tables, champs, formats et règles métier | Stagiaire | 7 | Haute | à faire | T05 | Dictionnaire de données initial | – |
-| T07 | Collecte & compréhension | Contrôler la qualité, la couverture et les limites des données | Stagiaire | 5 | Haute | à faire | T06 | Diagnostic qualité | – |
-| T08 | Collecte & compréhension | Sélectionner les variables et jeux de données utiles | Stagiaire | 6 | Moyenne | à faire | T07 | Jeu de données retenu | – |
-| T09 | Préparation des données | Définir les règles de nettoyage et de traitement des valeurs manquantes | Stagiaire | 3 | Haute | à faire | T07 | Règles de préparation | – |
-| T10 | Préparation des données | Nettoyer les doublons, formats et incohérences | Stagiaire | 8 | Haute | à faire | T09 | Script de nettoyage | – |
-| T11 | Préparation des données | Joindre les sources et créer les variables utiles | Stagiaire | 7 | Haute | à faire | T08, T10 | Table d'analyse | – |
-| T12 | Préparation des données | Vérifier les règles de transformation et documenter le pipeline | Stagiaire | 6 | Moyenne | à faire | T11 | Pipeline reproductible | – |
-| T13 | Analyse exploratoire | Réaliser les statistiques descriptives et contrôles de cohérence | Stagiaire | 7 | Haute | à faire | T12 | Synthèse descriptive | – |
-| T14 | Analyse exploratoire | Étudier les tendances, segments et relations entre variables | Stagiaire | 8 | Haute | à faire | T13 | Résultats exploratoires | – |
-| T15 | Analyse exploratoire | Créer les premières visualisations et les faire relire | Stagiaire | 7 | Moyenne | à faire | T14 | Graphiques exploratoires | – |
-| T16 | Modélisation / approfondissement | Choisir une méthode complémentaire si elle répond au besoin | Stagiaire | 3 | Basse | à faire | T14 | Choix méthodologique justifié | Optionnel selon le sujet |
-| T17 | Modélisation / approfondissement | Réaliser l'analyse approfondie ou le modèle retenu | Stagiaire | 13 | Moyenne | à faire | T16 | Résultats approfondis | Optionnel selon le sujet |
-| T18 | Modélisation / approfondissement | Évaluer les résultats et tester leur robustesse | Stagiaire | 5 | Moyenne | à faire | T17 | Évaluation / limites | – |
-| T19 | Restitution | Formuler les conclusions et recommandations opérationnelles | Stagiaire | 6 | Haute | à faire | T15, T18 | Recommandations | – |
-| T20 | Restitution | Construire un tableau de bord ou support de restitution | Stagiaire | 8 | Haute | à faire | T19 | Support de restitution | – |
-| T21 | Restitution | Rédiger le rapport de stage et expliquer la méthode | Stagiaire | 10 | Haute | à faire | T19 | Rapport final | – |
-| T22 | Restitution | Relire, intégrer les retours et finaliser les livrables | Stagiaire | 6 | Haute | à faire | T20, T21 | Livrables finaux | – |
-| T23 | Restitution | Préparer et présenter la soutenance | Stagiaire | 5 | Haute | à faire | T22 | Présentation de soutenance | – |
-| T24 | Suivi & documentation | Faire un point hebdomadaire et consigner les décisions | Stagiaire | – | Moyenne | – | Journée de suivi | Journal de suivi | Récurrent |
-| T25 | Suivi & documentation | Sauvegarder le code, les données dérivées et la documentation | Stagiaire | – | Moyenne | – | Dossier de projet documenté | – | Récurrent |
-
-📄 Fichier source lié : [Planning_stage_data_analyse.xlsx](Planning_stage_data_analyse.xlsx)
 
 > **Note :** ces données sont extraites du planning de stage en analyse de données ; à confronter et mettre à jour avec les valeurs réelles du fichier Excel.
+
+📄 Fichier source lié : [Planning_stage_data_analyse.xlsx](Planning_stage_data_analyse.xlsx)
 
 ### 📄 Aperçu des 5 premières lignes
 
@@ -317,7 +290,18 @@ Analyse exploratoire (EDA) : exploration des données pour dégager les tendance
 - 📄 Données : [Data Quality Report.xlsx](Data%20Quality%20Report.xlsx) — recense toutes les métriques d’exploration.
 - 📄 Journal : [Journal des décisions.xlsx](Journal%20des%20d%C3%A9cisions.xlsx)
 
-## 20. Script / ETL
+## 20. Tests de validation
+
+Tests de validation : vérifications menées pour s’assurer que les données et les résultats sont exacts, cohérents et conformes aux attentes avant leur mise en production.
+
+- Objectifs : vérifier l’exactitude des données extraites depuis SAP ; vérifier la cohérence des données (jointures, référentiels, dates) ; vérifier la conformité des résultats par rapport aux attentes métier ; valider les KPI et les tableaux de bord avant publication.
+
+📄 Fichier lié : [20_1_Tests_Validation.docx](20_1_Tests_Validation.docx)
+📄 Rapport : [20_Tests_Validation.pdf](20_Tests_Validation.pdf)
+
+---
+
+## 21. Script / ETL
 
 Automatisation de la collecte, du nettoyage et de la transformation des données pour alimenter les analyses de façon fiable et reproductible.
 
@@ -330,7 +314,7 @@ Automatisation de la collecte, du nettoyage et de la transformation des données
 
 **📊 Visualisation**
 
-## 21. Catalogue des KPI
+## 22. Catalogue des KPI
 
 📄 Fichier lié : [Catalogue KPI.xlsx](Catalogue%20KPI.xlsx) — contient les KPI, leur formule et l’objectif.
 
@@ -338,7 +322,7 @@ Automatisation de la collecte, du nettoyage et de la transformation des données
 |---|---|---|
 | – | – | Contenu à alimenter via le fichier. |
 
-## 22. Power BI – Modélisation et reporting
+## 23. Power BI – Modélisation et reporting
 
 Phase de modélisation et de mise en forme du modèle Power BI, juste avant l’analyse exploratoire : prise en main du fichier `.pbix`, chargement des sources, modélisation du modèle et préparation des requêtes.
 
@@ -358,13 +342,13 @@ Dashboard Power BI
 
 📄 Fichier lié : [Bi.pbix](Bi.pbix) (modèle Power BI / suivi).
 
-## 23. KPI / Dashboard
+## 24. KPI / Dashboard
 
 Tableaux de bord synthétiques pour suivre la performance de l’activité et faciliter la prise de décision.
 
 - 📄 Fichier lié : [Bi_export_donnees.pdf](Bi_export_donnees.pdf)
 
-## 24. Exemples de requêtes DAX / métriques KPI
+## 25. Exemples de requêtes DAX / métriques KPI
 
 ### Exemple – Ventes
 
@@ -402,13 +386,13 @@ Taux de Transformation = [Quantité de Bioprédateurs Appliquée] / [Interventio
 
 **💡 Recommandations business**
 
-## 25. Résultats
+## 26. Résultats
 
 Synthèse des analyses menées à partir des indicateurs clés, pour mesurer la performance, identifier les écarts et orienter les décisions.
 
 - 📄 Fichier lié : [Resultat.pdf](Resultat.pdf)
 
-## 26. Perspectives et/ou proposition
+## 27. Perspectives et/ou proposition
 
 Pistes d’amélioration et évolutions envisagées pour renforcer les analyses et soutenir les décisions futures.
 
@@ -418,12 +402,12 @@ Pistes d’amélioration et évolutions envisagées pour renforcer les analyses 
 
 **🔄 Retour d'expérience**
 
-## 27. REX – Retour sur expérience
+## 28. REX – Retour sur expérience
 
 - Bilan du projet : réussites, difficultés rencontrées et enseignements à retenir pour les prochains projets.
 - 📄 Fichier lié : [REX.docx](REX.docx) — Retour sur expérience.
 
-## 28. Procédure de dépannage rapide
+## 29. Procédure de dépannage rapide
 
 | Erreur / Symptôme | Cause probable | Action |
 |---|---|---|
@@ -432,11 +416,13 @@ Pistes d’amélioration et évolutions envisagées pour renforcer les analyses 
 | Refresh impossible dans Power BI Service | Gateway / credentials | Configurer la passerelle et les identités |
 | Données non actualisées | Refresh planifié non activé | Planifier le refresh |
 
-## 29. Sources et références
+## 30. Sources et références
 
 - **SAP :** [help.sap.com – SAP Fiori Client](https://help.sap.com/doc/d55f83e12e4b40779158fbaf08fe0f14/1.11/fr-FR/index.html)
 - **Power BI :** [learn.microsoft.com – Documentation Power BI](https://learn.microsoft.com/fr-fr/power-bi/)
 - **BIOLINE :** [www.biolineagrosciences.com – Bioline AgroSciences](https://www.biolineagrosciences.com/fr/)
+
+- **RGPD :** Conformité au Règlement Général sur la Protection des Données (UE) 2016/679 (RGPD) applicable aux données personnelles collectées pour les analyses biocontrôle (données SAP, données métier, données d’investigation). Règles générales retenues : licéité, loyauté et transparence ; minimisation des données ; limitation des finalités ; limitation de la conservation ; exactitude ; intégrité et confidentialité des données ; accountability. Droits des personnes concernées : accès, rectification, effacement, portabilité, opposition et limitation du traitement ; notification des violations de données et réparation des dommages. Source : EUR-Lex – Règlement (UE) 2016/679 et CNIL (Commission Nationale de l'Informatique et des Libertés). À suivre dans le cadre des traitements de données Power BI / SAP de BIOLINE.
 
 ---
 

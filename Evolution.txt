@@ -1,7 +1,7 @@
 # Évolution – Procédure Power BI ↔ SAP / BIOLINE
 
 **Document concerné :** `procedure-powerbi-sap.html`
-**Date :** 2026-10-29
+**Date :** 2026-11-01
 
 ## Cahier des charges – Évolution du document
 
@@ -122,6 +122,18 @@ Créer / faire évoluer un document HTML de procédure pour un projet Data Analy
 - Suppression de « (présent dans le même dossier). » (liens sources / planning).
 - Déplacement du séparateur 🔍 (juste avant la section 13, version renforcée) et du séparateur ✅ (juste avant la section 19).
 - Synchronisation HTML / Markdown.
+
+### Étape 15 – Suppression du tableau, ajout tests de validation, RGPD, variable société, raccourci haut
+- Section 12 : suppression du grand tableau T01–T25 ; conservation de l’aperçu des 5 premières lignes.
+- Ajout de la section « 20. Tests de validation » (après l’Analyse exploratoire – EDA).
+- Renumerrotation des sections suivantes l’insertion de la section 20 (Script / ETL → 21 … Sources et références → 30).
+- Ajout du paragraphe RGPD en section Sources (règles générales, droits, sources EUR-Lex / CNIL).
+- Ajout de la partie « CIRCUIT » en Cartographie métier (§2).
+- Ajout de la variable de nom de société (`NOM_SOCIETE`, `NOM_SOCIETE_COURT` + attributs `data-nom-societe`) et du bouton « Retour en haut ».
+- Ajout du raccourci « ↑ Retour en haut » dans l’en-tête (lien `#haut`).
+- Synchronisation HTML / Markdown.
+- Création du mode opératoire : `MODE_OPERATOIRE.md`.
+
 
 ---
 

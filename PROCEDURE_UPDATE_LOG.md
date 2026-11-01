@@ -1,7 +1,8 @@
 # Journal des mises à jour – Procédure Power BI ↔ SAP / BIOLINE
 
 **Fichier concerné :** `procedure-powerbi-sap.html`
-**Date :** 2026-10-29
+**Date :** 2026-11-01
+**Version :** 1.11
 **Projet :** BIOLINE – Gestion de projet Data Analyst / BI
 
 ---
@@ -57,6 +58,18 @@ Contenu :
 - Données : tableau réel T01–T25 extrait du planning Excel.
 - Nouvelles parties : Architecture, Analyse, Script, KPI / Dashboard, Résultats, Perspectives.
 
+| 2026-10-29 | Version courante du document HTML.
+
+Contenu :
+- Présentation de l’entreprise : mission, produits, cultures, contact.
+- Contexte & Sources : SAP / Power BI / BIOLINE.
+- Cahier des charges : Contexte, Objectifs, Sources, Livrables, Planning, Risques.
+- Prérequis, Étapes, Modélisation, Dépannage, Bonnes pratiques, Checklist,
+  Questionnaire, Exemples DAX / KPI, Modèle biologique.
+- Gantt : diagramme SVG + lien Excel (outils/Kanban supprimés).
+- Données : tableau réel T01–T25 extrait du planning Excel.
+- Nouvelles parties : Architecture, Analyse, Script, KPI / Dashboard, Résultats, Perspectives.
+
 Contenu supplémentaire (versions récentes) :
 - Cartographie métier (schéma processus métier).
 - Schéma de l’étoile (`schema_etoile.loo`).
@@ -65,6 +78,19 @@ Contenu supplémentaire (versions récentes) :
 
 État : version restaurée (rich) avec les données réelles, puis enrichie
 des nouvelles parties demandées.
+
+---
+
+**2026-11-01 – Version 1.11**
+
+Contenu :
+- Section 12 : suppression du grand tableau T01–T25 (conservation de l’aperçu des 5 premières lignes).
+- Nouvelle section « 20. Tests de validation » (après l’EDA).
+- Renumerrotation : Script / ETL → 21 … Sources et références → 30.
+- Paragraphe RGPD ajouté en section Sources.
+- Partie « CIRCUIT » ajoutée en Cartographie métier.
+- Variable de nom de société (`NOM_SOCIETE`, `NOM_SOCIETE_COURT`) + bouton retour en haut + raccourci « Retour en haut ».
+- Création du mode opératoire : `MODE_OPERATOIRE.md`.
 ```
 
 ## Historique complet des versions
@@ -82,6 +108,7 @@ des nouvelles parties demandées.
 | 1.8 | 2026-10-29 | Réorganisation des sections (Catalogue après KPI/Dashboard, Dictionnaire données après EDA, Dictionnaire acronymes après Architecture, Power BI après KPI/Dashboard, Exemples après Power BI), renumérotation 1-26, mode sombre éclairci. |
 | 1.9 | 2026-10-29 | Réorganisation complète : Dépannage rapide en fin (avant Sources), Cartographie métier après Présentation, Gouvernance des données avant EDA, Power BI juste avant KPI / Dashboard, Catalogue des KPI avant Exemples DAX / KPI, Modèle de données biologique avant EDA, nouvelle partie Schéma de l’étoile (`schema_etoile.loo`), séparateurs visuels ajoutés, renumérotation 1-29, Markdown synchronisé. |
 | 1.10 | 2026-10-29 | Ajustements contenu : Résultats, KPI/Dashboard, EDA, Script, Perspectives remplacés par des formulations opérationnelles ; aperçu 5 lignes ajouté ; lien + résumé Cahier des charges ; titre Gantt « Planning des tâches » ; bilan REX ; suppression Schéma/cartographie et mentions « (présent dans le même dossier). » ; séparateurs 🔍 et ✅ repositionnés (🔍 renforcé avant §13, ✅ avant §19). |
+| 1.11 | 2026-11-01 | Suppression du grand tableau (§12, conservation aperçu 5 lignes) ; ajout §20 « Tests de validation » ; renumérotation cascade (Script → 21 … Sources → 30) ; paragraphe RGPD ajouté (§30 Sources) ; partie « CIRCUIT » ajoutée (§2 Cartographie) ; variable société + bouton/raccourci retour en haut ajoutés ; création `MODE_OPERATOIRE.md`. |
 
 ---
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Procédure – Gestion de projet Data Analyst / BI (SAP + Power BI) – BIOLINE</title>
+<title id="pageTitle">Procédure – Gestion de projet Data Analyst / BI (SAP + Power BI) – BIOLINE</title>
 <style>
   :root {
     --bleu: #0f6cbd;
@@ -81,13 +81,17 @@
   .separator-strong::before { content: ""; flex: 1; height: 3px; background: var(--bleu-fonce); }
   .separator-strong::after { content: ""; flex: 1; height: 3px; background: var(--bleu-fonce); }
   .separator-strong span { font-size: 0.95rem; }
+  .back-to-top { position: fixed; bottom: 20px; right: 20px; z-index: 200; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--bordure); background: var(--bleu); color: #fff; font-size: 18px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: none; }
+  .top-shortcut { display: inline-block; margin-top: 12px; color: #fff; border: 1px solid rgba(255,255,255,0.55); padding: 6px 14px; border-radius: 16px; text-decoration: none; font-size: 0.9rem; }
+  .top-shortcut:hover { background: rgba(255,255,255,0.15); }
 </style>
 </head>
 <body data-theme="light">
 
 <header>
-  <h1>📋 Procédure – Gestion de projet Data Analyst / BI (SAP + Power BI) – BIOLINE</h1>
+  <h1>📋 Procédure – Gestion de projet Data Analyst / BI (SAP + Power BI) – <span data-nom-societe-court>BIOLINE</span></h1>
   <p>Guide professionnel complet : cycle de vie de la donnée, de l’analyse SAP au dashboard Power BI.</p>
+  <a href="#haut" class="top-shortcut">↑ Retour en haut</a>
 </header>
 
 <div class="theme-switch">
@@ -115,6 +119,7 @@
   <a href="#gouvernance-donnees">Gouvernance</a>
   <a href="#biologique">Modèle biologique</a>
   <a href="#analyse">Analyse</a>
+  <a href="#tests-validation">Tests</a>
   <a href="#script">Script / ETL</a>
   <a href="#catalogue-kpi">Catalogue des KPI</a>
   <a href="#powerbi">Power BI</a>
@@ -127,14 +132,14 @@
   <a href="#sources">Sources</a>
 </nav>
 
-<main>
+<main id="haut">
 
   <div class="separator"><span>🏢 Présentation entreprise</span></div>
 
   <!-- ============ 1. PRESENTATION DE L'ENTREPRISE ============ -->
   <section id="presentation-entreprise">
     <h2>1. Présentation de l’entreprise</h2>
-    <p><strong>Bioline AgroSciences</strong> est une société française spécialisée dans le <strong>biocontrol</strong> : « L’allié de confiance des agriculteurs dans la lutte biologique. La nature. Les gens. La simplicité. »</p>
+    <p><strong data-nom-societe>Bioline AgroSciences</strong> est une société française spécialisée dans le <strong>biocontrol</strong> : « L’allié de confiance des agriculteurs dans la lutte biologique. La nature. Les gens. La simplicité. »</p>
     <p>« Aider les agriculteurs dans leur transition vers une agriculture durable ».</p>
     <h3>Produits et domaines :</h3>
     <ul>
@@ -151,13 +156,13 @@
       <li>Vigne, maïs, oléagineurs / céréales à paille, arboriculture, espaces verts… Ravageurs : Eulia, Cochylis, Tordeuses de la vigne, Mites alimentaires, Pyrale du buis, Mouches des terreaux, Noctuelles défoliatrices, Lépidoptères, Acariens…</li>
     </ul>
     <h3>Contact :</h3>
-    <p>Bioline AgroSciences – Passage des 4 saisons, 26250 Livron-sur-Drôme, France<br>Tél : +33 (0)4 75 60 09 31<br>Email : france@biolineagrosciences.com</p>
+    <p><span data-nom-societe>Bioline AgroSciences</span> – Passage des 4 saisons, 26250 Livron-sur-Drôme, France<br>Tél : +33 (0)4 75 60 09 31<br>Email : france@biolineagrosciences.com</p>
   </section>
 
   <!-- ============ 2. CARTOGRAPHIE METIER ============ -->
   <section id="cartographie-metier">
     <h2>2. Cartographie métier</h2>
-    <p>Représentation du schéma du processus métier de BIOLINE :</p>
+    <p>Représentation du schéma du processus métier de <span data-nom-societe-court>BIOLINE</span> :</p>
     <pre>Demande / Besoin
 ↓
 Cadrage &amp; Compréhension
@@ -171,18 +176,20 @@ Analyse &amp; Gouvernance
 Reporting / KPI
 ↓
 Recommandations business</pre>
+    <h3>🔁 CIRCUIT :</h3>
+    <pre>Client ↓ Commande ↓ SAP ↓ Livraison ↓ Facturation ↓ Reporting Power BI</pre>
   </section>
 
   <!-- ============ 3. CONTEXTE ============ -->
   <section id="contexte">
     <h2>3. Contexte</h2>
-    <p>Ce document constitue la <strong>procédure officielle</strong> de gestion des projets Power BI de l’entreprise <span class="badge badge-bioline">BIOLINE</span> qui reposent sur des données <span class="badge badge-sap">SAP</span>.</p>
+    <p>Ce document constitue la <strong>procédure officielle</strong> de gestion des projets Power BI de l’entreprise <span class="badge badge-bioline" data-nom-societe-court>BIOLINE</span> qui reposent sur des données <span class="badge badge-sap">SAP</span>.</p>
     <h3>Les 3 sources utilisées dans le cadre du projet</h3>
     <table>
       <tr><th>Source</th><th>Type</th><th>Document / Lien</th></tr>
       <tr><td>SAP</td><td>Documentation technique</td><td><a href="https://help.sap.com/doc/d55f83e12e4b40779158fbaf08fe0f14/1.11/fr-FR/index.html" target="_blank" rel="noopener">SAP – User Guide (SAP Fiori Client)</a></td></tr>
       <tr><td>Power BI</td><td>Documentation produit</td><td><a href="https://learn.microsoft.com/fr-fr/power-bi/" target="_blank" rel="noopener">Power BI – Documentation Microsoft Learn</a></td></tr>
-      <tr><td>Bioline AgroSciences</td><td>Documentation société</td><td><a href="https://www.biolineagrosciences.com/fr/" target="_blank" rel="noopener">Bioline AgroSciences – Site officiel</a></td></tr>
+      <tr><td data-nom-societe>Bioline AgroSciences</td><td>Documentation société</td><td><a href="https://www.biolineagrosciences.com/fr/" target="_blank" rel="noopener">Bioline AgroSciences – Site officiel</a></td></tr>
     </table>
     <div class="callout">
       <strong>Point important :</strong> la documentation SAP référencée porte sur le <strong>SAP Fiori Client</strong>. Quelle que soit la module SAP utilisée (SD, MM, PP, QM, FICO, BW, HANA…), la <strong>procédure de connexion et de traitement des données reste la même</strong>.
@@ -273,7 +280,7 @@ Recommandations business</pre>
   <section id="modele">
     <h2>7. Modélisation recommandée</h2>
     <div class="callout callout-green">
-      <strong>Conseil BIOLINE :</strong> adopter un schéma en étoile (fait + dimensions) pour les rapports biocontrôle (produits, cultures, interventions, ventes, etc.).
+      <strong><span data-nom-societe-court>BIOLINE</span> :</strong> adopter un schéma en étoile (fait + dimensions) pour les rapports biocontrôle (produits, cultures, interventions, ventes, etc.).
     </div>
     <ul class="check">
       <li>Table de faits : mesures (montant, quantité, nombre d'interventions…).</li>
@@ -320,11 +327,11 @@ Recommandations business</pre>
 
   <!-- ============ 10. QUESTIONNAIRE ============ -->
   <section id="questionnaire">
-    <h2>10. Modèle de questionnaire – Identifier le module SAP utilisé par BIOLINE</h2>
+    <h2>10. Modèle de questionnaire – Identifier le module SAP utilisé par <span data-nom-societe-court>BIOLINE</span></h2>
     <p>À remplir pour chaque nouveau projet, afin de confirmer le contexte SAP exact :</p>
     <table>
       <tr><th>Champ</th><th>Question / Réponse</th></tr>
-      <tr><td>Société</td><td>Bioline AgroSciences</td></tr>
+      <tr><td>Société</td><td data-nom-societe>Bioline AgroSciences</td></tr>
       <tr><td>Domaine</td><td>Agriculture / biocontrôle</td></tr>
       <tr><td>Module SAP</td><td>☐ SD ☐ MM ☐ PP ☐ QM ☐ FICO ☐ BW ☐ HANA ☐ Autre : ________</td></tr>
       <tr><td>Version du système</td><td>☐ ECC ☐ S/4HANA ☐ BW ☐ HANA</td></tr>
@@ -407,49 +414,6 @@ Recommandations business</pre>
   <section id="donnees">
     <h2>12. Données réelles – Planning_stage_data_analyse.xlsx</h2>
     <p>Données issues du fichier Excel <strong>Planning_stage_data_analyse.xlsx</strong> (onglet « PLANNING DES TÂCHES »), en lien avec le <a href="#gantt">diagramme de Gantt</a> :</p>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Phase</th>
-          <th>Tâche</th>
-          <th>Responsable</th>
-          <th>Durée (jours)</th>
-          <th>Priorité</th>
-          <th>Statut</th>
-          <th>Dépend de</th>
-          <th>Livrable attendu</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>T01</td><td>Cadrage</td><td>Prendre connaissance du contexte, des objectifs et du processus métier</td><td>Stagiaire</td><td>2</td><td>Haute</td><td>En cours</td><td>Note de cadrage</td><td>–</td><td>–</td></tr>
-        <tr><td>T02</td><td>Cadrage</td><td>Clarifier la problématique et les questions d'analyse</td><td>Stagiaire</td><td>4</td><td>Haute</td><td>à faire</td><td>T01</td><td>Problématique validée</td><td>–</td></tr>
-        <tr><td>T03</td><td>Cadrage</td><td>Définir les indicateurs de réussite et le périmètre</td><td>Stagiaire</td><td>6</td><td>Haute</td><td>à faire</td><td>T02</td><td>Liste des indicateurs</td><td>–</td></tr>
-        <tr><td>T04</td><td>Cadrage</td><td>Établir le plan de travail avec le tuteur ou la tutrice</td><td>Stagiaire</td><td>2</td><td>Moyenne</td><td>à faire</td><td>T03</td><td>Planning validé</td><td>–</td></tr>
-        <tr><td>T05</td><td>Collecte &amp; compréhension</td><td>Inventorier les sources et obtenir les accès nécessaires</td><td>Stagiaire</td><td>5</td><td>Haute</td><td>à faire</td><td>T03</td><td>Inventaire des sources</td><td>–</td></tr>
-        <tr><td>T06</td><td>Collecte &amp; compréhension</td><td>Explorer les tables, champs, formats et règles métier</td><td>Stagiaire</td><td>7</td><td>Haute</td><td>à faire</td><td>T05</td><td>Dictionnaire de données initial</td><td>–</td></tr>
-        <tr><td>T07</td><td>Collecte &amp; compréhension</td><td>Contrôler la qualité, la couverture et les limites des données</td><td>Stagiaire</td><td>5</td><td>Haute</td><td>à faire</td><td>T06</td><td>Diagnostic qualité</td><td>–</td></tr>
-        <tr><td>T08</td><td>Collecte &amp; compréhension</td><td>Sélectionner les variables et jeux de données utiles</td><td>Stagiaire</td><td>6</td><td>Moyenne</td><td>à faire</td><td>T07</td><td>Jeu de données retenu</td><td>–</td></tr>
-        <tr><td>T09</td><td>Préparation des données</td><td>Définir les règles de nettoyage et de traitement des valeurs manquantes</td><td>Stagiaire</td><td>3</td><td>Haute</td><td>à faire</td><td>T07</td><td>Règles de préparation</td><td>–</td></tr>
-        <tr><td>T10</td><td>Préparation des données</td><td>Nettoyer les doublons, formats et incohérences</td><td>Stagiaire</td><td>8</td><td>Haute</td><td>à faire</td><td>T09</td><td>Script de nettoyage</td><td>–</td></tr>
-        <tr><td>T11</td><td>Préparation des données</td><td>Joindre les sources et créer les variables utiles</td><td>Stagiaire</td><td>7</td><td>Haute</td><td>à faire</td><td>T08, T10</td><td>Table d'analyse</td><td>–</td></tr>
-        <tr><td>T12</td><td>Préparation des données</td><td>Vérifier les règles de transformation et documenter le pipeline</td><td>Stagiaire</td><td>6</td><td>Moyenne</td><td>à faire</td><td>T11</td><td>Pipeline reproductible</td><td>–</td></tr>
-        <tr><td>T13</td><td>Analyse exploratoire</td><td>Réaliser les statistiques descriptives et contrôles de cohérence</td><td>Stagiaire</td><td>7</td><td>Haute</td><td>à faire</td><td>T12</td><td>Synthèse descriptive</td><td>–</td></tr>
-        <tr><td>T14</td><td>Analyse exploratoire</td><td>Étudier les tendances, segments et relations entre variables</td><td>Stagiaire</td><td>8</td><td>Haute</td><td>à faire</td><td>T13</td><td>Résultats exploratoires</td><td>–</td></tr>
-        <tr><td>T15</td><td>Analyse exploratoire</td><td>Créer les premières visualisations et les faire relire</td><td>Stagiaire</td><td>7</td><td>Moyenne</td><td>à faire</td><td>T14</td><td>Graphiques exploratoires</td><td>–</td></tr>
-        <tr><td>T16</td><td>Modélisation / approfondissement</td><td>Choisir une méthode complémentaire si elle répond au besoin</td><td>Stagiaire</td><td>3</td><td>Basse</td><td>à faire</td><td>T14</td><td>Choix méthodologique justifié</td><td>Optionnel selon le sujet</td></tr>
-        <tr><td>T17</td><td>Modélisation / approfondissement</td><td>Réaliser l'analyse approfondie ou le modèle retenu</td><td>Stagiaire</td><td>13</td><td>Moyenne</td><td>à faire</td><td>T16</td><td>Résultats approfondis</td><td>Optionnel selon le sujet</td></tr>
-        <tr><td>T18</td><td>Modélisation / approfondissement</td><td>Évaluer les résultats et tester leur robustesse</td><td>Stagiaire</td><td>5</td><td>Moyenne</td><td>à faire</td><td>T17</td><td>Évaluation / limites</td><td>–</td></tr>
-        <tr><td>T19</td><td>Restitution</td><td>Formuler les conclusions et recommandations opérationnelles</td><td>Stagiaire</td><td>6</td><td>Haute</td><td>à faire</td><td>T15, T18</td><td>Recommandations</td><td>–</td></tr>
-        <tr><td>T20</td><td>Restitution</td><td>Construire un tableau de bord ou support de restitution</td><td>Stagiaire</td><td>8</td><td>Haute</td><td>à faire</td><td>T19</td><td>Support de restitution</td><td>–</td></tr>
-        <tr><td>T21</td><td>Restitution</td><td>Rédiger le rapport de stage et expliquer la méthode</td><td>Stagiaire</td><td>10</td><td>Haute</td><td>à faire</td><td>T19</td><td>Rapport final</td><td>–</td></tr>
-        <tr><td>T22</td><td>Restitution</td><td>Relire, intégrer les retours et finaliser les livrables</td><td>Stagiaire</td><td>6</td><td>Haute</td><td>à faire</td><td>T20, T21</td><td>Livrables finaux</td><td>–</td></tr>
-        <tr><td>T23</td><td>Restitution</td><td>Préparer et présenter la soutenance</td><td>Stagiaire</td><td>5</td><td>Haute</td><td>à faire</td><td>T22</td><td>Présentation de soutenance</td><td>–</td></tr>
-        <tr><td>T24</td><td>Suivi &amp; documentation</td><td>Faire un point hebdomadaire et consigner les décisions</td><td>Stagiaire</td><td>–</td><td>Moyenne</td><td>–</td><td>Journée de suivi</td><td>Journal de suivi</td><td>Récurrent</td></tr>
-        <tr><td>T25</td><td>Suivi &amp; documentation</td><td>Sauvegarder le code, les données dérivées et la documentation</td><td>Stagiaire</td><td>–</td><td>Moyenne</td><td>–</td><td>Dossier de projet documenté</td><td>–</td><td>Récurrent</td></tr>
-      </tbody>
-    </table>
     <p>📄 Fichier source lié : <a href="Planning_stage_data_analyse.xlsx">Planning_stage_data_analyse.xlsx</a></p>
     <div class="callout callout-green">
       <strong>Note :</strong> ces données sont extraites du planning de stage en analyse de données ; à confronter et mettre à jour avec les valeurs réelles du fichier Excel.
@@ -557,9 +521,24 @@ Nombre d'Interventions par Produit = CALCULATE (
     <p>📄 Journal : <a href="Journal des décisions.xlsx">Journal des décisions.xlsx</a></p>
   </section>
 
-  <!-- ============ 20. SCRIPT / ETL ============ -->
+  <!-- ============ 20. TESTS DE VALIDATION ============ -->
+  <section id="tests-validation">
+    <h2>20. Tests de validation</h2>
+    <p>Tests de validation : vérifications menées pour s’assurer que les données et les résultats sont exacts, cohérents et conformes aux attentes avant leur mise en production.</p>
+    <h3>Objectifs des tests de validation</h3>
+    <ul class="check">
+      <li>Vérifier l’exactitude des données extraites depuis SAP.</li>
+      <li>Vérifier la cohérence des données (jointures, référentiels, dates).</li>
+      <li>Vérifier la conformité des résultats par rapport aux attentes métier.</li>
+      <li>Valider les KPI et les tableaux de bord avant publication.</li>
+    </ul>
+    <p>📄 Fichier lié : <a href="20_1_Tests_Validation.docx">20_1_Tests_Validation.docx</a></p>
+    <p>📄 Rapport : <a href="20_Tests_Validation.pdf">20_Tests_Validation.pdf</a></p>
+  </section>
+
+  <!-- ============ 21. SCRIPT / ETL ============ -->
   <section id="script">
-    <h2>20. Script / ETL</h2>
+    <h2>21. Script / ETL</h2>
     <p>Automatisation de la collecte, du nettoyage et de la transformation des données pour alimenter les analyses de façon fiable et reproductible.</p>
     <p>Outils : Python, Power Query, SSIS, Talend, Airflow, dbt.</p>
     <pre>Extraction
@@ -574,9 +553,9 @@ Chargement</pre>
 
   <div class="separator"><span>📊 Visualisation</span></div>
 
-  <!-- ============ 21. CATALOGUE DES KPI ============ -->
+  <!-- ============ 22. CATALOGUE DES KPI ============ -->
   <section id="catalogue-kpi">
-    <h2>21. Catalogue des KPI</h2>
+    <h2>22. Catalogue des KPI</h2>
     <p>📄 Fichier lié : <a href="Catalogue KPI.xlsx">Catalogue KPI.xlsx</a> — contient les KPI, leur formule et l’objectif.</p>
     <table>
       <thead>
@@ -588,9 +567,9 @@ Chargement</pre>
     </table>
   </section>
 
-  <!-- ============ 22. POWER BI ============ -->
+  <!-- ============ 23. POWER BI ============ -->
   <section id="powerbi">
-    <h2>22. Power BI – Modélisation et reporting</h2>
+    <h2>23. Power BI – Modélisation et reporting</h2>
     <p>Phase de modélisation et de mise en forme du modèle Power BI, juste avant l’analyse exploratoire : prise en main du fichier <code>.pbix</code>, chargement des sources, modélisation du modèle et préparation des requêtes.</p>
 
     <svg viewBox="0 0 920 140" width="100%" role="img" aria-label="Schéma rapide Power BI : SAP vers Dashboard">
@@ -612,16 +591,16 @@ Chargement</pre>
     <p>📄 Fichier lié : <a href="Bi.pbix">Bi.pbix</a> (modèle Power BI / suivi).</p>
   </section>
 
-  <!-- ============ 23. KPI / DASHBOARD ============ -->
+  <!-- ============ 24. KPI / DASHBOARD ============ -->
   <section id="kpi-dashboard">
-    <h2>23. KPI / Dashboard</h2>
+    <h2>24. KPI / Dashboard</h2>
     <p>Tableaux de bord synthétiques pour suivre la performance de l’activité et faciliter la prise de décision.</p>
     <p>📄 Fichier lié : <a href="Bi_export_donnees.pdf">Bi_export_donnees.pdf</a></p>
   </section>
 
-  <!-- ============ 24. EXEMPLES DAX / METRIQUES KPI ============ -->
+  <!-- ============ 25. EXEMPLES DAX / METRIQUES KPI ============ -->
   <section id="exemples">
-    <h2>24. Exemples de requêtes DAX / métriques KPI</h2>
+    <h2>25. Exemples de requêtes DAX / métriques KPI</h2>
     <h3>Exemple – Ventes</h3>
     <pre>Ventes Totales = SUM ( 'Ventes'[Montant] )
 
@@ -648,32 +627,32 @@ Taux de Transformation = [Quantité de Bioprédateurs Appliquée] / [Interventio
 
   <div class="separator"><span>💡 Recommandations business</span></div>
 
-  <!-- ============ 25. RESULTATS ============ -->
+  <!-- ============ 26. RESULTATS ============ -->
   <section id="resultats">
-    <h2>25. Résultats</h2>
+    <h2>26. Résultats</h2>
     <p>Synthèse des analyses menées à partir des indicateurs clés, pour mesurer la performance, identifier les écarts et orienter les décisions.</p>
     <p>📄 Fichier lié : <a href="Resultat.pdf">Resultat.pdf</a></p>
   </section>
 
-  <!-- ============ 26. PERSPECTIVES ============ -->
+  <!-- ============ 27. PERSPECTIVES ============ -->
   <section id="perspectives">
-    <h2>26. Perspectives et/ou proposition</h2>
+    <h2>27. Perspectives et/ou proposition</h2>
     <p>Pistes d’amélioration et évolutions envisagées pour renforcer les analyses et soutenir les décisions futures.</p>
     <p>📄 Fichier lié : <a href="Recommandations.docx">Recommandations.docx</a></p>
   </section>
 
   <div class="separator"><span>🔄 Retour d'expérience</span></div>
 
-  <!-- ============ 27. REX RETOUR SUR EXPERIENCE ============ -->
+  <!-- ============ 28. REX RETOUR SUR EXPERIENCE ============ -->
   <section id="rex">
-    <h2>27. REX – Retour sur expérience</h2>
+    <h2>28. REX – Retour sur expérience</h2>
     <p>Bilan du projet : réussites, difficultés rencontrées et enseignements à retenir pour les prochains projets.</p>
     <p>📄 Fichier lié : <a href="REX.docx">REX.docx</a> — Retour sur expérience.</p>
   </section>
 
-  <!-- ============ 28. DEPANAGE ============ -->
+  <!-- ============ 29. DEPANAGE ============ -->
   <section id="depannage">
-    <h2>28. Procédure de dépannage rapide</h2>
+    <h2>29. Procédure de dépannage rapide</h2>
     <table>
       <tr><th>Erreur / Symptôme</th><th>Cause probable</th><th>Action</th></tr>
       <tr><td>Connexion impossible Power BI → SAP</td><td>URL, firewall, authentification</td><td>Vérifier URL, tester via <code>/IWFND/GW_CLIENT</code>, vérifier SSO</td></tr>
@@ -683,23 +662,35 @@ Taux de Transformation = [Quantité de Bioprédateurs Appliquée] / [Interventio
     </table>
   </section>
 
-  <!-- ============ 29. SOURCES ============ -->
+  <!-- ============ 30. SOURCES ============ -->
   <section id="sources">
-    <h2>29. Sources et références</h2>
+    <h2>30. Sources et références</h2>
     <ul>
       <li><strong>SAP :</strong> <a href="https://help.sap.com/doc/d55f83e12e4b40779158fbaf08fe0f14/1.11/fr-FR/index.html" target="_blank" rel="noopener">help.sap.com – SAP Fiori Client</a></li>
       <li><strong>Power BI :</strong> <a href="https://learn.microsoft.com/fr-fr/power-bi/" target="_blank" rel="noopener">Power BI – Documentation Microsoft Learn</a></li>
-      <li><strong>BIOLINE :</strong> <a href="https://www.biolineagrosciences.com/fr/" target="_blank" rel="noopener">Bioline AgroSciences – Site officiel</a></li>
+      <li><strong><span data-nom-societe-court>BIOLINE</span> :</strong> <a href="https://www.biolineagrosciences.com/fr/" target="_blank" rel="noopener">Bioline AgroSciences – Site officiel</a></li>
     </ul>
+    <p><strong>RGPD :</strong> Conformité au Règlement Général sur la Protection des Données (UE) 2016/679 (RGPD) applicable aux données personnelles collectées pour les analyses biocontrôle (données SAP, données métier, données d’investigation). Règles générales retenues : licéité, loyauté et transparence ; minimisation des données ; limitation des finalités ; limitation de la conservation ; exactitude ; intégrité et confidentialité des données ; accountability. Droits des personnes concernées : accès, rectification, effacement, portabilité, opposition et limitation du traitement ; notification des violations de données et réparation des dommages. Source : EUR-Lex – Règlement (UE) 2016/679 et CNIL (Commission Nationale de l'Informatique et des Libertés). À suivre dans le cadre des traitements de données Power BI / SAP de BIOLINE.</p>
   </section>
 
 </main>
 
+<button class="back-to-top" id="backToTop" type="button" aria-label="Retour en haut">↑</button>
+
 <footer>
-  <p>Procédure Power BI ↔ SAP – Société BIOLINE AgroSciences – Source : documentation SAP, Power BI et site BIOLINE</p>
+  <p>Procédure Power BI ↔ SAP – Société <span data-nom-societe>Bioline AgroSciences</span> – Source : documentation SAP, Power BI et site <span data-nom-societe-court>BIOLINE</span></p>
 </footer>
 
 <script>
+  const NOM_SOCIETE = "Bioline AgroSciences";
+  const NOM_SOCIETE_COURT = "BIOLINE";
+  function majTextesSociete() {
+    document.querySelectorAll('[data-nom-societe]').forEach(function (el) { el.textContent = NOM_SOCIETE; });
+    document.querySelectorAll('[data-nom-societe-court]').forEach(function (el) { el.textContent = NOM_SOCIETE_COURT; });
+  }
+  majTextesSociete();
+  document.title = "Procédure – Gestion de projet Data Analyst / BI (SAP + Power BI) – " + NOM_SOCIETE_COURT;
+
   const themeBtns = document.querySelectorAll('.theme-btn');
   themeBtns.forEach(function (b) {
     b.addEventListener('click', function () {
@@ -707,6 +698,14 @@ Taux de Transformation = [Quantité de Bioprédateurs Appliquée] / [Interventio
       themeBtns.forEach(function (x) { x.classList.remove('active'); });
       b.classList.add('active');
     });
+  });
+
+  const backToTopBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function () {
+    backToTopBtn.style.display = (window.scrollY > 400) ? 'flex' : 'none';
+  });
+  backToTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 
