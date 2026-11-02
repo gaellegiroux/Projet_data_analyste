@@ -426,4 +426,62 @@ Pistes d’amélioration et évolutions envisagées pour renforcer les analyses 
 
 ---
 
+## 31. Rapport de stage
+
+Consignes du stage – rédaction du **rapport de stage** : **15 pages maximum** – chaque phrase compte.
+
+### Structure attendue du rapport
+
+- **L’entreprise :** activité, positionnement, contexte professionnel.
+- **Le service :** méthodes de travail, environnement (OS, outils collaboratifs) et sa pertinence pour la data.
+- **Le projet principal :** objectifs et enjeux, cahier des charges découpé en tâches, organisation (Agile…), collecte des données, bibliothèques de visualisation, planning, plan d’analyse.
+- **Réalisations et résultats :** bibliographie ML, algorithmes justifiés, code commenté par étape, résultats interprétés au regard des objectifs.
+- **Bilan :** retour d’expérience, analyse de la prise de poste et des missions.
+
+### Rédaction
+
+- 15 pages maximum : chaque phrase compte.
+- Poser le plan dès le premier mois.
+- Rédiger le contexte et l’environnement pendant qu’il est frais.
+- Montrez des extraits de code commentés, en annexe.
+- Notez chaque référence bibliographique au moment de la lecture.
+- Faites relire : clarté et orthographe.
+
+---
+
+## 32. La soutenance
+
+La soutenance de fin de cursus : **présentation de 25 min**, Questions-Réponses, jury mixte (Campus Numérique, formateurs et professionnels extérieurs).
+
+### Contenu obligatoire de la soutenance
+
+- Entreprise d’accueil et environnement professionnel.
+- Projet développé : cahier des charges et enjeux.
+- Méthodes, technologies et ressources : organisation (Agile, Git, planning) ; plan d’analyse ; outils statistiques ; algorithmes justifiés ; implémentation Python ; prédictions et critères de performance.
+- Interprétation des résultats.
+- Bilan de la mission : compétences et soft skills acquises ; préconisations sur les process de l’entreprise ; perspectives.
+
+### Règles de présentation
+
+- 1 slide = 1 min = 1 info = 1 graphique.
+- Le titre donne le message (ex. « Le churn se concentre sur les clients récents ») plutôt que « Résultats ».
+- Des mots-clés, pas des paragraphes ; slides numérotées, plan rappelé, texte lisible du fond de la salle.
+- Un seul message par graphique ; axes, unités, légendes lisibles.
+- Pas de tableau de 20 lignes : uniquement les chiffres clés.
+
+### À l’oral
+
+- Répéter à voix haute (plusieurs fois, chronométré, devant quelqu’un) ; ne pas lire ; les slides sont un support.
+- Regarder le jury (pas l’écran, pas ses notes) ; transitions : chaque slide annonce la suivante.
+- Débit posé, pause après chaque chiffre clé ; vocabulaire technique précis, sigles expliqués.
+
+### Préparer les questions-réponses
+
+- Listes les questions probables (voir la liste du jury) et prépare des réponses courtes.
+- Prévoir des slides de secours en annexe : détails techniques, code, métriques.
+- Répondre brièvement, puis proposer de détailler.
+- Ne pas savoir ? → le dire, puis expliquer comment on chercherait.
+
+---
+
 *Fin du document.*

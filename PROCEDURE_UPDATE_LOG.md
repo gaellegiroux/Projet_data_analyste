@@ -1,8 +1,8 @@
 # Journal des mises à jour – Procédure Power BI ↔ SAP / BIOLINE
 
 **Fichier concerné :** `procedure-powerbi-sap.html`
-**Date :** 2026-11-01
-**Version :** 1.11
+**Date :** 2026-11-02
+**Version :** 1.14
 **Projet :** BIOLINE – Gestion de projet Data Analyst / BI
 
 ---
@@ -93,6 +93,14 @@ Contenu :
 - Création du mode opératoire : `MODE_OPERATOIRE.md`.
 ```
 
+**2026-11-02 – Version 1.14**
+
+Contenu :
+- Ajout des points pour le rapport de stage et la soutenance : §31 « Rapport de stage » ; §32 « La soutenance ».
+- Synchronisation HTML / Markdown.
+
+---
+
 ## Historique complet des versions
 
 | Version | Date | Changements majeurs |
@@ -109,6 +117,9 @@ Contenu :
 | 1.9 | 2026-10-29 | Réorganisation complète : Dépannage rapide en fin (avant Sources), Cartographie métier après Présentation, Gouvernance des données avant EDA, Power BI juste avant KPI / Dashboard, Catalogue des KPI avant Exemples DAX / KPI, Modèle de données biologique avant EDA, nouvelle partie Schéma de l’étoile (`schema_etoile.loo`), séparateurs visuels ajoutés, renumérotation 1-29, Markdown synchronisé. |
 | 1.10 | 2026-10-29 | Ajustements contenu : Résultats, KPI/Dashboard, EDA, Script, Perspectives remplacés par des formulations opérationnelles ; aperçu 5 lignes ajouté ; lien + résumé Cahier des charges ; titre Gantt « Planning des tâches » ; bilan REX ; suppression Schéma/cartographie et mentions « (présent dans le même dossier). » ; séparateurs 🔍 et ✅ repositionnés (🔍 renforcé avant §13, ✅ avant §19). |
 | 1.11 | 2026-11-01 | Suppression du grand tableau (§12, conservation aperçu 5 lignes) ; ajout §20 « Tests de validation » ; renumérotation cascade (Script → 21 … Sources → 30) ; paragraphe RGPD ajouté (§30 Sources) ; partie « CIRCUIT » ajoutée (§2 Cartographie) ; variable société + bouton/raccourci retour en haut ajoutés ; création `MODE_OPERATOIRE.md`. |
+| 1.12 | 2026-11-02 | Ajout version Notion : `procedure-powerbi-sap_notion.md` (v1.11 + front matter). |
+| 1.13 | 2026-11-02 | Ajout checklist nettoyage : `33.1_Checklist_Nettoyage_donnees.md`, scripts Python `df` : `33.2_Scripts_Nettoyage_df.py`, scripts SQL : `33.3_Scripts_Nettoyage_df.sql`. |
+| 1.14 | 2026-11-02 | Ajout des points pour le rapport de stage et la soutenance : §31 « Rapport de stage » (15 pages max, structure, rédaction) ; §32 « La soutenance » (25 min, contenu obligatoire, slides, oral, Q/R, jury, grille d’évaluation). |
 
 ---
 

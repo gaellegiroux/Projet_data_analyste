@@ -137,6 +137,13 @@ Créer / faire évoluer un document HTML de procédure pour un projet Data Analy
 
 ---
 
+### Étape 16 – Ajout des points pour le rapport de stage et la soutenance
+- Ajout de la section « 31. Rapport de stage » : 15 pages maximum, structure des parties (entreprise, service, projet, réalisations/résultats, bilan), rédaction.
+- Ajout de la section « 32. La soutenance » : présentation de 25 min, contenu obligatoire, règles de présentation, à l’oral, préparation Q/R, jury, grille d’évaluation.
+- Synchronisation HTML / Markdown.
+
+---
+
 ## Spécification fonctionnelle finale (cahier des charges)
 
 ### Fonctionnalités attendues
